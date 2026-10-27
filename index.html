@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synergy Engineering</title>
+  <meta name="description" content="Synergy Engineering projektuje, buduje i uruchamia systemy transportu wewnętrznego od A do Z: mechanika, elektryka, automatyka, integracja z WMS i sieć OT. Oszacuj niewiążący koszt swojej linii.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Synergy Engineering, początek strony">
+      <span class="brand-mark">SYNERGY</span><span class="brand-sub">ENGINEERING</span>
+    </a>
+    <nav class="topnav" aria-label="Sekcje strony">
+      <a href="#arkusz-01" data-goto="0.11">Jak powstaje linia</a>
+      <a href="#zakres">Zakres</a>
+      <a href="#zapytanie">Przykładowe zapytanie</a>
+      <a href="#proces">Jak pracujemy</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="oszacuj-koszt.html">Oszacuj koszt <span class="arr" aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="main">
+    <section class="line" id="top" aria-label="Przykładowa linia, warstwa po warstwie">
+      <div class="sticky">
+        <div class="stage" aria-hidden="true">
+          <canvas id="scene"></canvas>
+          <img class="fallback" id="fallback" src="assets/fallback/p00.jpg" alt="">
+          <div class="scrim"></div>
+          <svg class="leaders" id="leaders"></svg>
+          <div class="labels" id="labels"></div>
+          <div class="titleblock" id="titleblock">
+            <div class="tb-row"><span class="tb-k">Arkusz</span><span class="tb-v" id="tb-sheet">00 / 06</span></div>
+            <div class="tb-row"><span class="tb-k">Warstwa</span><span class="tb-v" id="tb-layer">Hala</span></div>
+            <div class="tb-row"><span class="tb-k">Status</span><span class="tb-v" id="tb-status">Projekt</span></div>
+            <div class="tb-row tb-foot"><span>Przykładowa linia · dane fikcyjne</span></div>
+          </div>
+        </div>
+        <nav class="layers" id="layers" aria-label="Warstwy linii">
+          <p class="layers-title" id="layers-title">Warstwy</p>
+          <button type="button" data-layer="hala" data-goto="0.11"><span class="ly-n">01</span><span class="ly-t">Hala</span><span class="ly-dot"></span></button>
+          <button type="button" data-layer="mechanika" data-goto="0.25"><span class="ly-n">02</span><span class="ly-t">Mechanika</span><span class="ly-dot"></span></button>
+          <button type="button" data-layer="automatyka" data-goto="0.39"><span class="ly-n">03</span><span class="ly-t">Automatyka</span><span class="ly-dot"></span></button>
+          <button type="button" data-layer="bezpieczenstwo" data-goto="0.57"><span class="ly-n">04</span><span class="ly-t">Bezpieczeństwo</span><span class="ly-dot"></span></button>
+          <button type="button" data-layer="siec" data-goto="0.84"><span class="ly-n">05</span><span class="ly-t">Sieć OT</span><span class="ly-dot"></span></button>
+        </nav>
+      </div>
+
+      <div class="cards" id="cards">
+        <article class="card card-hero" data-p="0">
+          <p class="eyebrow">Szukasz możliwości zautomatyzowania procesów transportu logistycznego?</p>
+          <h1>Twoja linia transportowa, którą policzymy warstwa po&nbsp;warstwie.</h1>
+          <p class="lead">Synergy Engineering projektuje, buduje i&nbsp;uruchamia systemy transportu wewnętrznego od A&nbsp;do&nbsp;Z. <span class="lead-2">Kompleksowo zajmiemy się mechaniką, elektryką, automatyką, integracją z&nbsp;WMS, a&nbsp;nawet zabezpieczymy sieć OT Twojej linii.</span> <span class="lead-3">Wykonamy ocenę ryzyka i&nbsp;oddamy Ci w&nbsp;pełni zwalidowany system, w&nbsp;którym ryzyko zmniejszyliśmy do akceptowalnego poziomu.</span></p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="oszacuj-koszt.html">Oszacuj koszt swojej linii <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn-text" href="#arkusz-01" data-goto="0.11">Zobacz, jak powstaje linia <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="fine">Szacunek niewiążący · to nie jest oferta</p>
+        </article>
+
+        <article class="card" id="arkusz-01" data-s="0.06" data-p="0.11">
+          <p class="sheet">Arkusz 01 / 06 · Hala</p>
+          <h2>Najpierw pusta hala i&nbsp;kilka liczb.</h2>
+          <p>Jaka ma być wydajność linii? Samodzielnie, a&nbsp;przede wszystkim z&nbsp;naszą pomocą, dobierasz maszyny do realizacji swojego celu.</p>
+          <p>W tym przykładzie paleta z&nbsp;kartonami zostaje wprowadzona do systemu wózkiem widłowym i&nbsp;przetransportowana do strefy robota paletyzującego, a&nbsp;stamtąd trafia do magazynu wysyłkowego.</p>
+          <div class="asks"><p class="asks-k">Zapytamy Cię o</p><p>rodzaj jednostki logistycznej, jej wymiary, masę ładunku, rodzaj wejścia i&nbsp;wyjścia z&nbsp;systemu, a&nbsp;także łączną długość linii.</p></div>
+        </article>
+
+        <article class="card card-long" id="arkusz-02" data-s="0.15" data-p="0.25">
+          <p class="sheet">Arkusz 02 / 06 · Mechanika</p>
+          <h2>Linia z&nbsp;modułów dobranych do ładunku.</h2>
+          <p>Przepaletyzowanie kartonów z&nbsp;palety dostawczej na paletę wysyłkową z&nbsp;przekładkami kartonowymi oraz zabezpieczeniem krawędzi kartonów. Antresola prowadzi linię nad drogą dla wózków i&nbsp;pieszych.</p>
+          <ol class="positions">
+            <li><span class="ball">1</span>Przenośnik rolkowy</li>
+            <li><span class="ball">2</span>Winda z&nbsp;przenośnikiem</li>
+            <li><span class="ball">3</span>Obrotnica na antresoli</li>
+            <li><span class="ball">4</span>Krzyżówka</li>
+            <li><span class="ball">5</span>Przenośnik łańcuchowy</li>
+            <li><span class="ball">6</span>Robot paletyzujący z&nbsp;magazynkiem przekładek</li>
+            <li><span class="ball">7</span>Destacker palet ze stołem nożycowym</li>
+            <li><span class="ball">8</span>Owijarka (obrotnica z&nbsp;modułem owijania palety folią stretch i&nbsp;aplikatorem narożników)</li>
+            <li><span class="ball">9</span>Brama szybkobieżna</li>
+            <li><span class="ball">10</span>Wózek jazdy poziomej</li>
+            <li><span class="ball">11</span>Stół nożycowy unoszący</li>
+          </ol>
+          <p class="note">Numeracja jak na rysunku złożeniowym: jedna pozycja na typ elementu.</p>
+          <div class="asks"><p class="asks-k">Zapytamy Cię o</p><p>nośnik logistyczny, wydajność, funkcje maszyn, zakres dostawy itp.</p></div>
+        </article>
+
+        <article class="card" id="arkusz-03" data-s="0.345" data-p="0.39">
+          <p class="sheet">Arkusz 03 / 06 · Automatyka</p>
+          <h2>Linia musi wiedzieć, gdzie jest każda paleta.</h2>
+          <p>Bramka kontroli konturu nie wpuści palety, z&nbsp;której ładunek wystaje poza obrys. Czujniki przesyłają na wejścia sterownika PLC informację o&nbsp;położeniu palet i&nbsp;maszyn, a&nbsp;skaner odczytuje kod QR owiniętej folią palety. Przy wszystkich stanowiskach są wyłączniki awaryjne.</p>
+          <div class="asks"><p class="asks-k">Zapytamy Cię o</p><p>identyfikację i&nbsp;śledzenie ładunku, standard sterowników w&nbsp;zakładzie i&nbsp;czas pracy (liczbę zmian).</p></div>
+        </article>
+
+        <article class="card" data-s="0.42" data-p="0.48">
+          <p class="sheet">Arkusz 03 / 06 · Szafa sterownicza</p>
+          <h2>Sterowanie to osobna część projektu.</h2>
+          <p>W szafie pracują sterownik PLC z&nbsp;modułami wejść i&nbsp;wyjść, sterownik bezpieczeństwa, falowniki i&nbsp;wyłączniki silnikowe napędów, styczniki, przekaźniki, zabezpieczenia, zasilacze 24&nbsp;V i&nbsp;przełącznik sieciowy.</p>
+          <p>Na froncie szafy głównej: wyłącznik główny, panel HMI, lampki sygnalizacyjne, przycisk reset oraz wyłącznik awaryjny.</p>
+          <p>W zapytaniach tę część łatwo pominąć, a&nbsp;ona też posiada swój koszt.</p>
+        </article>
+
+        <article class="card" id="arkusz-04" data-s="0.545" data-p="0.57">
+          <p class="sheet">Arkusz 04 / 06 · Bezpieczeństwo</p>
+          <h2>Ryzyko zmniejszamy do akceptowalnego poziomu.</h2>
+          <p>W&nbsp;ocenie ryzyka (EN&nbsp;ISO&nbsp;12100) szacujemy ryzyko, określamy wymagany Performance Level (PL<sub>r</sub>) dla funkcji bezpieczeństwa (EN&nbsp;ISO&nbsp;13849-1) i&nbsp;dobieramy odpowiednie środki techniczne, m.in. wygrodzenie celi z&nbsp;drzwiami z&nbsp;ryglem, radar bezpieczeństwa w&nbsp;celi zrobotyzowanej, skaner laserowy z&nbsp;polem ostrzegawczym i&nbsp;ochronnym na wózku jazdy poziomej oraz kurtyny bezpieczeństwa.</p>
+          <p class="src">Warto zapamiętać: od 20&nbsp;stycznia 2027&nbsp;r. <a href="https://eur-lex.europa.eu/eli/reg/2023/1230/oj" target="_blank" rel="noopener">rozporządzenie (UE) 2023/1230</a> zastępuje dyrektywę maszynową 2006/42/WE.</p>
+          <div class="asks"><p class="asks-k">Zapytamy Cię o</p><p>miejsca przebywania ludzi w&nbsp;pobliżu maszyn, środowisko, w&nbsp;którym mają pracować maszyny (np. mroźnia, ATEX), i&nbsp;ograniczenia hali.</p></div>
+        </article>
+
+        <article class="card" data-s="0.59" data-p="0.635">
+          <p class="sheet">Arkusz 04 / 06 · Muting krzyżowy</p>
+          <h2>Paletę kurtyna przepuści.</h2>
+          <p>Przed bramą szybkobieżną stoją czujniki, których wiązki krzyżują się nad przenośnikiem. Paleta przecina obie wiązki w&nbsp;określonym oknie czasowym, więc sterownik na chwilę wycisza kurtynę (muting). Brama się podnosi, paleta przejeżdża, kurtyna wraca do pracy.</p>
+        </article>
+
+        <article class="card card-alert" data-s="0.665" data-p="0.735">
+          <p class="sheet">Arkusz 04 / 06 · Zatrzymanie</p>
+          <h2>Człowieka nie przepuści.</h2>
+          <p>Człowiek nie uruchomi mutingu tak jak paleta, więc kurtyna pozostaje aktywna. Gdy wejdzie w&nbsp;jej pole, linia natychmiast się zatrzyma. Ponowny start wymaga potwierdzenia przez operatora.</p>
+        </article>
+
+        <article class="card" id="arkusz-05" data-s="0.76" data-p="0.84">
+          <p class="sheet">Arkusz 05 / 06 · Sieć OT</p>
+          <h2>Sieć linii jest odrębna i&nbsp;chroniona przed siecią zewnętrzną.</h2>
+          <p>Sterowniki, robot, panel HMI i&nbsp;skaner pracują w&nbsp;osobnej, lokalnej sieci OT. Od sieci biurowej i&nbsp;internetu oddziela ją zapora, która przepuszcza tylko zdefiniowany ruch, na przykład dane palety do WMS. Próba dostępu z&nbsp;zewnątrz kończy się na zaporze.</p>
+          <p class="src"><a href="https://eur-lex.europa.eu/eli/reg/2023/1230/oj" target="_blank" rel="noopener">Rozporządzenie 2023/1230</a> (zał. III, pkt 1.1.9, ang. <i>protection against corruption</i>) wymaga, by podłączenie do maszyny innego urządzenia, także zdalnego, nie prowadziło do sytuacji niebezpiecznej. Sieć dzielimy na strefy i&nbsp;kanały według IEC&nbsp;62443.</p>
+          <div class="asks"><p class="asks-k">Zapytamy Cię o</p><p>połączenie z&nbsp;WMS / ERP, potrzebę zdalnego serwisu i&nbsp;politykę IT zakładu.</p></div>
+        </article>
+
+        <article class="card" id="arkusz-06" data-s="0.885" data-p="0.945">
+          <p class="sheet">Arkusz 06 / 06 · Gotowa linia</p>
+          <h2>Jedna hala, cztery warstwy.</h2>
+          <p>Mechanika, automatyka, bezpieczeństwo i&nbsp;sieć OT. Każda z&nbsp;nich zmienia koszt, dlatego zanim podamy liczbę, pytamy o&nbsp;wszystkie warstwy.</p>
+          <p class="note toggle-hint">Przełączaj warstwy w&nbsp;panelu, żeby zobaczyć, z&nbsp;czego składa się linia.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="oszacuj-koszt.html">Oszacuj koszt swojej linii <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block scope" id="zakres" aria-labelledby="zakres-h">
+      <div class="wrap scope-grid">
+        <div class="scope-head">
+          <p class="sheet">Wykaz pozycji · zakres Synergy</p>
+          <h2 id="zakres-h">Od koncepcji po uruchomienie. Jeden wykonawca.</h2>
+          <p>Projektujemy, budujemy i&nbsp;uruchamiamy całą linię lub tylko wybrane przez Ciebie zakresy, np. budujemy tylko maszyny, a&nbsp;Ty integrujesz je z&nbsp;automatyką i&nbsp;zapewniasz bezpieczeństwo.</p>
+        </div>
+        <div class="parts" role="table" aria-label="Zakres prac Synergy Engineering">
+          <div class="parts-row parts-th" role="row">
+            <span role="columnheader">Poz.</span><span role="columnheader">Nazwa</span><span role="columnheader">Zakres</span><span role="columnheader">Arkusz</span>
+          </div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">A</span><span role="cell" class="pn">Koncepcja i&nbsp;layout</span><span role="cell">Przepływ, wydajność, miejsce w&nbsp;hali, układ linii.</span><span role="cell"><a href="#arkusz-01" data-goto="0.11">01</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">B</span><span role="cell" class="pn">Konstrukcja mechaniczna</span><span role="cell">Maszyny i&nbsp;moduły projektowane pod Twój ładunek.</span><span role="cell"><a href="#arkusz-02" data-goto="0.25">02</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">C</span><span role="cell" class="pn">Produkcja</span><span role="cell">Maszyny budujemy od zera.</span><span role="cell"><a href="#arkusz-02" data-goto="0.25">02</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">D</span><span role="cell" class="pn">Elektryka i&nbsp;automatyka</span><span role="cell">Szafy sterownicze, PLC, HMI, napędy, czujniki, oprogramowanie.</span><span role="cell"><a href="#arkusz-03" data-goto="0.39">03</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">E</span><span role="cell" class="pn">Bezpieczeństwo maszyn i&nbsp;CE</span><span role="cell">Ocena ryzyka, techniczne środki bezpieczeństwa, dokumentacja, deklaracja zgodności dla całej linii.</span><span role="cell"><a href="#arkusz-04" data-goto="0.57">04</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">F</span><span role="cell" class="pn">Sieć OT i&nbsp;integracja IT</span><span role="cell">Odrębna sieć linii, zapora, wymiana danych z&nbsp;WMS / ERP.</span><span role="cell"><a href="#arkusz-05" data-goto="0.84">05</a></span></div>
+          <div class="parts-row" role="row"><span role="cell" class="pz">G</span><span role="cell" class="pn">Montaż i&nbsp;uruchomienie</span><span role="cell">W Twojej hali, do pracy linii.</span><span role="cell"><a href="#arkusz-06" data-goto="0.945">06</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block request" id="zapytanie" aria-labelledby="zapytanie-h">
+      <div class="wrap request-grid">
+        <div class="request-text">
+          <p class="sheet">Wynik kwestionariusza</p>
+          <h2 id="zapytanie-h">To dostaniesz na końcu.</h2>
+          <p>Na końcu dostaniesz specyfikację wstępną, która trafi również do naszego zespołu inżynierów. Pola, których nie wypełnisz, oznaczymy jako „do ustalenia”. Przy polach obowiązkowych wystarczy nam szacunek. Formularz przepuści Cię dalej nawet bez nich, ale wtedy nie policzy kosztu orientacyjnego. Skontaktujemy się z&nbsp;Tobą i&nbsp;pomożemy Ci zbudować system szyty na Twoją miarę.</p>
+          <p>Koszt orientacyjny zobaczysz po podaniu danych kontaktowych.</p>
+          <a class="btn btn-gold" href="oszacuj-koszt.html">Oszacuj koszt swojej linii <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <figure class="paper" aria-label="Przykładowe zapytanie z danymi fikcyjnymi">
+          <div class="stamp" aria-hidden="true">Przykład<br>dane fikcyjne</div>
+          <header class="paper-head">
+            <span>Zapytanie · specyfikacja wstępna</span><span>Nr: przykład</span>
+          </header>
+          <dl class="paper-fields">
+            <div><dt>Rodzaj ładunku</dt><dd>Kartony zbiorcze, zamknięte</dd></div>
+            <div><dt>Wymiary ładunku</dt><dd>400 × 300 × 250 mm</dd></div>
+            <div><dt>Nośnik</dt><dd>Paleta EUR 1200 × 800 (dostawcza i&nbsp;wysyłkowa)</dd></div>
+            <div><dt>Masa</dt><dd>do 12 kg / karton, paleta do 600 kg</dd></div>
+            <div><dt>Wydajność</dt><dd>średnio 8, szczytowo 12 palet / h</dd></div>
+            <div><dt>Wejście → wyjście</dt><dd>wózek widłowy → odbiór wózkiem paletowym w&nbsp;magazynie; trasa przez antresolę nad drogą pojazdów</dd></div>
+            <div><dt>Funkcje</dt><dd>podnoszenie (2 windy), obracanie, przepaletyzowanie z&nbsp;przekładkami, owijanie z&nbsp;zabezpieczeniem krawędzi, identyfikacja QR</dd></div>
+            <div><dt>Zakres dostawy</dt><dd>pełna integracja: <span class="ballrow"><span class="ball">1</span>–<span class="ball">11</span></span> + automatyka, bezpieczeństwo, sieć OT</dd></div>
+            <div><dt>Styk z&nbsp;ludźmi</dt><dd>droga pieszych i&nbsp;pojazdów pod antresolą</dd></div>
+            <div><dt>Czas pracy</dt><dd>2 zmiany</dd></div>
+            <div class="tbd"><dt>Połączenie z&nbsp;WMS / ERP</dt><dd>do ustalenia na pierwszej rozmowie</dd></div>
+            <div class="tbd"><dt>Termin i&nbsp;okno montażowe</dt><dd>do ustalenia na pierwszej rozmowie</dd></div>
+          </dl>
+          <div class="paper-cost">
+            <span class="pc-k">Koszt orientacyjny</span>
+            <span class="pc-mask" aria-hidden="true"></span>
+            <span class="pc-v">pojawi się po podaniu danych kontaktowych</span>
+          </div>
+          <footer class="paper-foot">Trafia do: inżynierowie sprzedaży · inżynierowie aplikacji</footer>
+        </figure>
+      </div>
+    </section>
+
+    <section class="block process" id="proces" aria-labelledby="proces-h">
+      <div class="wrap">
+        <p class="sheet">Od pytania do oferty</p>
+        <h2 id="proces-h">Co dzieje się po wysłaniu zapytania.</h2>
+        <ol class="dim">
+          <li><span class="dim-n">1</span><strong>Odpowiadasz na pytania</strong><span>Około 20 pytań. Przy części z&nbsp;nich możesz wpisać „nie wiem”. Uszczegółowimy to razem z&nbsp;zespołem inżynierów z&nbsp;Synergy Engineering.</span></li>
+          <li><span class="dim-n">2</span><strong>Widzisz koszt orientacyjny</strong><span>Po podaniu danych kontaktowych, razem ze specyfikacją.</span></li>
+          <li><span class="dim-n">3</span><strong>Czyta je zespół pierwszego kontaktu</strong><span>Inżynierowie sprzedaży oraz inżynierowie aplikacji.</span></li>
+          <li><span class="dim-n">4</span><strong>Rozmowa i&nbsp;oferta</strong><span>Ustalamy pola „do ustalenia” i&nbsp;przygotowujemy ofertę.</span></li>
+        </ol>
+        <ul class="terms">
+          <li>Szacunek jest niewiążący.</li>
+          <li>To nie jest oferta.</li>
+          <li>Dane kontaktowe trafiają tylko do zespołu pierwszego kontaktu.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block final" aria-labelledby="final-h">
+      <div class="wrap final-inner">
+        <svg class="final-hall" viewBox="0 0 400 240" role="img" aria-label="Pusta hala w rzucie izometrycznym z jedną osobą">
+          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+            <path class="fh-floor" d="M200 78 L362 159 L200 240 L38 159 Z"/>
+            <path class="fh-grid" d="M232 94 L70 175 M264 110 L102 191 M296 126 L134 207 M328 142 L166 223 M168 94 L330 175 M136 110 L298 191 M104 126 L266 207 M72 142 L234 223"/>
+            <path class="fh-wall" d="M38 159 L38 118 M200 78 L200 37 M362 159 L362 118"/>
+            <path class="fh-cut" d="M38 118 L200 37 L362 118"/>
+          </g>
+          <g class="fh-person"><rect x="195" y="140" width="10" height="24" rx="5"/><circle cx="200" cy="133" r="5"/></g>
+        </svg>
+        <h2 id="final-h">Twoja hala jest jeszcze pusta.</h2>
+        <p>Opisz, co ma w&nbsp;niej jeździć. Resztę policzymy warstwa po warstwie.</p>
+        <a class="btn btn-gold" href="oszacuj-koszt.html">Oszacuj koszt swojej linii <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <canvas class="hwf-canvas" aria-hidden="true"></canvas>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="brand-foot"><span class="brand-mark">SYNERGY</span> <span class="brand-sub">ENGINEERING</span></p>
+        <p>Projekt koncepcyjny: firma Synergy Engineering i&nbsp;przykłady na tej stronie są fikcyjne.</p>
+        <p>Materiał stanowi jedynie informację i&nbsp;nie zawiera porad prawnych.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hwf-rule"><a class="hwf-up" href="#top">Do góry <span aria-hidden="true">↑</span></a></div>
+    </div>
+  </footer>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
